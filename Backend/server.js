@@ -7,10 +7,10 @@ const cookieParser = require('cookie-parser')
 const cors = require('cors')
 require('dotenv').config()
 
-// app.use(cors({
-//     origin: process.env.CLIENT_URL,
-//     credentials: true
-// }))
+app.use(cors({
+    origin: process.env.CLIENT_URL,
+    credentials: true
+}))
 
 app.use(express.json())
 app.use(cookieParser());
