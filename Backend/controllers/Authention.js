@@ -20,7 +20,7 @@ const Register = async (req, res) => {
 
         const hashPassword = await bcrypt.hash(password, 10);
 
-        await Patient.create({
+        const user = await Patient.create({
             name,
             email,
             password : hashPassword
@@ -46,7 +46,7 @@ const Login = async (req, res) => {
             return res.status(400).json({message: "All fields are required!"})
         }
 
-        const user = await Patient.findOne({email})
+        const user = await Patient.findOne({email: email})
         if(!user){
             return res.status(404).json({message: "No user found"})
         }

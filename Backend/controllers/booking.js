@@ -10,12 +10,23 @@ const bookTest = async(req, res) => {
         }
 
         await Booking.create({
-            PatientId: req.userId,
+            patientId: req.userId,
             testId: testId
         })
+        res.status(201).json({message:"Booking Successful"})
     }catch(err){
+        console.log(err.message)
         res.status(500).json({message: `Internal server error: ${err.message}`})
     }
 }
 
-module.exports = bookTest;
+const retriveBookings = async(req, res) => {
+    try{
+        const bookings = await Booking.find({patientId: req.userId}).populate('testId')
+        return res.status(200).json(bookings);
+    }catch(err){
+        return res.status(500).json({message: "Internal server error"})
+    }
+}
+
+module.exports = {bookTest, retriveBookings};
