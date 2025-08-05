@@ -4,7 +4,7 @@ const sendReport = async (req, res) => {
     try{
         const {bookingId} = req.params;
 
-        const filePath = path.join(__dirname, '../report.pdf');
+        const filePath = path.join(__dirname, '../report.pdf'); //joins the path
         return res.download(filePath, `Report-${bookingId}.pdf`, (err) => {
             if(err){
                 console.log(err)

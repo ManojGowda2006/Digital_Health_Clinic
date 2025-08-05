@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
+//register controller
 const Register = async (req, res) => {
     try{
         const {name, email, password} = req.body;
@@ -27,7 +28,7 @@ const Register = async (req, res) => {
         })
         const token = jwt.sign({userId: user._id} , process.env.JWT_SECRET, {expiresIn: "1h"});
         
-        res.cookie("token", token, {
+        res.cookie("token", token, {  //httpOnly cookie to store JWT
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         maxAge: 60*60*1000,
@@ -41,7 +42,7 @@ const Register = async (req, res) => {
         res.status(500).json({message: `Internal Server Error: ${err.message}`})
     }
 }
-
+//login controller
 const Login = async (req, res) => {
     try{
         const {email, password} = req.body;
