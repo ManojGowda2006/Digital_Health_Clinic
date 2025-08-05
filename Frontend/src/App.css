@@ -44,21 +44,22 @@
   height: 100%;
   margin: 0;
  }
-.main{
+/* .main{
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: bisque;
   height: 100vh;
-}
+} */
 .register{
-  background-color: rgb(236, 144, 5);
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
   border: none;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 20px 20px 20px 20px;
-  border-radius: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 20px;
+  transition: background-color 0.3s ease;
 }
 .title{
   font-size: 90px;
@@ -68,4 +69,287 @@ p{
 }
 .container{
   text-align: center;
+}
+
+.test {
+  padding: 40px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  border: 1px solid #4caf50;
+  border-radius: 12px;
+  width: 280px;
+  min-height: 280px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.description {
+  font-size: 14px;
+  color: #444;
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.price-book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #388e3c;
+}
+
+.booking-container {
+  margin-top: 40px;
+}
+
+.booking {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking:hover {
+  background-color: #388e3c;
+}
+.bookings-container {
+  padding: 40px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.download-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #388e3c;
+}
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f5e9; /* Light green background */
+}
+.l{
+  text-align: center  ;
+}
+.login-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #4caf50;
+}
+
+.login-form h2 {
+  margin-bottom: 10px;
+  color: #4caf50;
+  text-align: center;
+}
+
+.login-form label {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+.sp{
+  text-align: center;
+}
+.login-form input:focus {
+  border-color: #4caf50;
+}
+
+.login-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #388e3c;
+}
+.register-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1fdf2; 
+}
+
+.register-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #4caf50;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-form h2 {
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.register-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.register-form input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.register-form input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.register-form button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #388e3c;
+}
+.landing-container {
+  height: 100vh;
+  background-color: #e8f5e9; /* light green */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.landing-content {
+  background-color: #ffffff;
+  padding: 60px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #4caf50;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.download{
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #a3d3a5;
+  cursor: pointer;
 }

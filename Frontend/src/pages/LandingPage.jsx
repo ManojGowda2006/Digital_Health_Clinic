@@ -3,7 +3,7 @@ import '../App.css'
 function LandingPage() {
   const navigate = useNavigate()
   return(
-    <div className='main'>
+    <div className='landing-container'>
       <div className='container'>
         <h1 className='title'>DIGITAL HEALTH CLINIC</h1>
         <p>"Empowering you with Digital Health"</p>
