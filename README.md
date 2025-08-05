@@ -39,4 +39,4 @@
    - Enabled CORS to allow frontend-backend communication
    - Deployed frontend in Netlify and backend in Render
 5. Testing:
-   - Test API endpoints with Bruno
+   - Tested API endpoints with Bruno
