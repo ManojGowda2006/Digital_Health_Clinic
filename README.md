@@ -1,6 +1,6 @@
 # Digital_Health_Clinic
 
- Patient-portal for digital health clinic, where they can register, view , book and download the reports in the pdf format.
+ Patient-portal for digital health clinic, where patients can register, view , book and download the reports in the pdf format.
 
  #### Deployed Link - "https://digitalhealthclinic.netlify.app/"
 
