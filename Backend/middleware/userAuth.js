@@ -4,6 +4,9 @@ require('dotenv').config()
 const userAuth = async(req, res, next)=>{
     try{
         const {token} = req.cookies;
+        console.log("token", token)
+        console.log("----------------")
+        console.log(req.cookies)
         if(!token){
             return res.status(401).json({message: "token not found"})
         }
